@@ -69,3 +69,21 @@ WHERE NOT EXISTS (
 query_job = client.query(sql)
 query_job.result()
 print("✅ Carga incremental completada en tabla final")
+
+
+
+# Agregamos notificacion a slack sobre actualizacion
+
+import requests
+
+def notificar_slack(mensaje):
+    url = "https://hooks.slack.com/services/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"
+    payload = {"text": mensaje}
+    response = requests.post(url, json=payload)
+    if response.status_code == 200:
+        print("✅ Mensaje enviado a Slack")
+    else:
+        print(f"❌ Error al enviar mensaje: {response.status_code}, {response.text}")
+
+# ejemplo de uso
+notificar_slack("✅ Proceso completado: Datos cargados en BigQuery correctamente.")
