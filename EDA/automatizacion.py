@@ -77,7 +77,7 @@ print("✅ Carga incremental completada en tabla final")
 import requests
 
 def notificar_slack(mensaje):
-    url = "https://hooks.slack.com/services/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"
+    url = "https://hooks.slack.com/services/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"
     payload = {"text": mensaje}
     response = requests.post(url, json=payload)
     if response.status_code == 200:
