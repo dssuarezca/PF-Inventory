@@ -6,6 +6,9 @@ import pandas as pd
 from google.cloud import bigquery
 import requests
 from datetime import datetime
+from slack_sdk import WebClient
+from slack_sdk.errors import SlackApiError
+from dotenv import load_dotenv
 
 # Configuración
 PROJECT_ID = "inventarioproject-471611"
@@ -63,20 +66,26 @@ inserted_rows = query_job.num_dml_affected_rows
 print(f"🔎 Filas nuevas insertadas: {inserted_rows}")
 
 #---------------------------------------------------------------------------------------------------
-# 5. Notificación a Slack solo si hay filas nuevas
+#Enviamos mensaje a slack en caso de que haya datos nuevos cargados
+
+
+load_dotenv()
+#Cargamos el token del bot y el nombre del canal en un archivo .env
+SLACK_TOKEN = os.getenv("SLACK_BOT_TOKEN")
+SLACK_CHANNEL = os.getenv("SLACK_CHANNEL")
+
+client = WebClient(token=SLACK_TOKEN)
+
 def notificar_slack(mensaje):
-    url = "https://hooks.slack.com/services/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"
-    payload = {"text": mensaje}
-    response = requests.post(url, json=payload)
-    if response.status_code == 200:
+    try:
+        response = client.chat_postMessage(channel=SLACK_CHANNEL, text=mensaje)
         print("✅ Mensaje enviado a Slack")
-    else:
-        print(f"❌ Error al enviar mensaje: {response.status_code}, {response.text}")
+    except SlackApiError as e:
+        print(f"❌ Error al enviar mensaje: {e.response['error']}")
+
 
 if inserted_rows and inserted_rows > 0:
     notificar_slack(f"✅ Proceso completado: {inserted_rows} registros nuevos cargados en BigQuery.")
-    notificacion_enviada = True
 else:
     print("ℹ️ No se encontraron datos nuevos. No se envió notificación.")
 
-#---------------------------------------------------------------------------------------------------
