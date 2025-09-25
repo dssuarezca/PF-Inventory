@@ -38,9 +38,9 @@ Los datasets se encuentran en la carpeta [`/data`](./data/)
 
 ## 🧰 Herramientas y Tecnologías
 
-- Python 3.x
+- Python 3.12.5
 - pandas, numpy
-- matplotlib, seaborn
+- matplotlib, seaborn. scikit-learn
 - Jupyter Notebook
 - SQL
 - Power BI
@@ -50,19 +50,21 @@ Los datasets se encuentran en la carpeta [`/data`](./data/)
 ## 📁 Estructura del Repositorio
 
 ```
-LATAM_COVID-19/
-├── etl/
-│   └── etl.ipynb
+PF-Inventory/
 ├── eda/
-│   └── eda.ipynb
+│   └── eda y etl.ipynb
 ├── data/
-│   └── processed/
-├── informe/
-│   ├── README.md 
+│   └── 2017PurchasePricesDec/
+    └── BegInvFINAL12312016/
+    └── EndInvFINAL12312016/
+    └── InvoicePurchases12312016/
+    └── PurchasesFINAL12312016/
+    └── SalesFINAL12312016/
+├── informe/ 
 │   ├── Imagenes/
 │   └── Graficos/
 ├── powerbi/
-│   └── informe_covid_latam.pbix
+│   └── informe_Inventory.pbix
 └── README.md
 
 ```
@@ -74,7 +76,7 @@ powerbi
 
 Este proyecto incluye un conjunto de visualizaciones interactivas desarrolladas en Power BI que permiten explorar 
 
-➡️ Podés explorarlas en detalle en el archivo `informe_covid_latam.pbix` y en el informe completo ubicado en la carpeta [`informe/`](./informe/).
+➡️ Puede explorarlas en detalle en el archivo `pf_inventory.pbix` y en el informe completo ubicado en la carpeta [`informe/`](./informe/).
 
 
 ---
@@ -91,14 +93,13 @@ Este proyecto se ejecuta en notebooks de Jupyter, por lo que es recomendable con
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/eremohn/LATAM_COVID-19.git
-cd LATAM_COVID-19
+https://github.com/dssuarezca/PF-Inventory.git
 ```
 ---
 
 ## 📊 Visualizacion del Informe en Power BI
 
-Además del informe detallado disponible en formato Markdown dentro de la carpeta [`informe/`](./informe), existe una visualización interactiva en Power BI que permitirá explorar de forma dinámica los principales indicadores relacionados con el impacto del COVID-19 en Latinoamérica.
+existe una visualización interactiva en Power BI que permitirá explorar de forma dinámica los principales indicadores relacionados con los inventarios de los diferentes proveedores.
 
 🔹 Esta visualización permitirá:
 
@@ -123,5 +124,6 @@ Daniel Suarez – [GitHub](https://github.com/dssuarezca)
 Estudiante Analista de Datos
 
 ---
+
 
 
