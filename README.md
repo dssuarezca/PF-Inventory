@@ -63,11 +63,11 @@ PF-Inventory/
 │   └── generacion_graficos
 ├── data/
 │   └── 2017PurchasePricesDec/
-    └── BegInvFINAL12312016/
-    └── EndInvFINAL12312016/
-    └── InvoicePurchases12312016/
-    └── PurchasesFINAL12312016/
-    └── SalesFINAL12312016/
+│   └── BegInvFINAL12312016/
+│   └── EndInvFINAL12312016/
+│   └── InvoicePurchases12312016/
+│   └── PurchasesFINAL12312016/
+│   └── SalesFINAL12312016/
 ├── informe/ 
 │   ├── Imagenes/
 │   └── Graficos/
