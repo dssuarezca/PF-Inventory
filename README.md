@@ -52,7 +52,15 @@ Los datasets se encuentran en la carpeta [`/data`](./data/)
 ```
 PF-Inventory/
 ├── eda/
+│   └── EDA_compras-ipynb
+│   └── EDA_inventario_final.ipynb
+│   └── EDA_precio_compra.ipynb
+│   └── EDA_purchases.ipynb
+│   └── EDA_sales.ipynb
+│   └── EDA_ventas.ipynb
+│   └── automatizacion.py
 │   └── eda y etl.ipynb
+│   └── generacion_graficos
 ├── data/
 │   └── 2017PurchasePricesDec/
     └── BegInvFINAL12312016/
@@ -76,7 +84,7 @@ powerbi
 
 Este proyecto incluye un conjunto de visualizaciones interactivas desarrolladas en Power BI que permiten explorar 
 
-➡️ Puede explorarlas en detalle en el archivo `pf_inventory.pbix` y en el informe completo ubicado en la carpeta [`informe/`](./informe/).
+➡️ Puede explorarlas en detalle en el archivo `informe_inventario.pbix` y en el informe completo ubicado en la carpeta [`informe/`](./informe/).
 
 
 ---
@@ -118,12 +126,13 @@ existe una visualización interactiva en Power BI que permitirá explorar de for
 
 ---
 
-## ✒ Autor
+## ✒ Autores
 
 Daniel Suarez – [GitHub](https://github.com/dssuarezca)  
-Estudiante Analista de Datos
-
+Walter Frías Mendaro [GitHub](https://github.com/Waldo1939)
+Diego Grande Zapata [GitHub](https://github.com/DGrandaZapata)
 ---
+
 
 
 
